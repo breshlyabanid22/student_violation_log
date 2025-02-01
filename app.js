@@ -11,6 +11,7 @@ const cancelFormBtn = document.getElementById('cancelFormBtn');
 
 // Toggle form visibility
 addRecordBtn.addEventListener('click', () => {
+  console.log('Add Record button clicked');
   formContainer.classList.toggle('visible');
 });
 
