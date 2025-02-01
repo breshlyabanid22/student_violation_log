@@ -1,5 +1,5 @@
-const SUPABASE_URL = 'https://pndfhvdsjrmboefrwimt.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZGZodmRzanJtYm9lZnJ3aW10Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg0MDExMTgsImV4cCI6MjA1Mzk3NzExOH0.QThLkxCvnA6YkqB-nyr3bUNhgHs2tsULkSovlmOAOEs';
+const SUPABASE_URL = process.env.MY_SUPABASE_URL;
+const SUPABASE_KEY = process.env.MY_SUPABASE_KEY;
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const form = document.getElementById('violationForm');
