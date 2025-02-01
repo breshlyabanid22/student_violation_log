@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violation Log</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Violation Log</h1>
+
+    <!-- Add a Record Button -->
+    <button id="addRecordBtn" class="add-record">Add a Record</button>
+
+    <!-- Form to input student details (hidden by default) -->
+    <div id="formContainer" class="form-container hidden">
+      <form id="violationForm">
+        <input type="text" id="name" placeholder="Student Name" required>
+        <input type="text" id="schoolId" placeholder="School ID" required>
+        <select id="grade" required>
+          <option value="">Select Grade</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+        <input type="text" id="section" placeholder="Section" required>
+        <div class="violation-types">
+          <label><input type="checkbox" name="violation" value="Tardiness"> Tardiness</label>
+          <label><input type="checkbox" name="violation" value="Improper Uniform"> Improper Uniform</label>
+          <!-- Add more violation types as needed -->
+        </div>
+        <textarea id="remarks" placeholder="Remarks"></textarea>
+        <button type="submit">Submit</button>
+        <button type="button" id="cancelFormBtn" class="cancel-form">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Table to display violations -->
+    <table id="violationTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>School ID</th>
+          <th>Grade</th>
+          <th>Section</th>
+          <th>Violation Types</th>
+          <th>Remarks</th>
+          <th>Violation Count</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be populated by JavaScript -->
+      </tbody>
+    </table>
+
+    <!-- Delete All Button -->
+    <button id="deleteAllBtn" class="delete-all">Delete All Records</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

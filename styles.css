@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Add a Record Button */
+.add-record {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-record:hover {
+  background-color: #2980b9;
+}
+
+/* Form Container */
+.form-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  display: none; /* Hidden by default */
+}
+
+.form-container.visible {
+  display: block; /* Show when toggled */
+}
+
+/* Form Styles */
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.cancel-form {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-form:hover {
+  background-color: #c82333;
+}
+
+.violation-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.violation-types label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Violation Count Styles */
+.violation-count {
+  font-weight: 600;
+}
+
+.violation-count.green {
+  color: #28a745;
+}
+
+.violation-count.orange {
+  color: #fd7e14;
+}
+
+.violation-count.red {
+  color: #dc3545;
+}
+
+/* Action Buttons */
+button.update {
+  background-color: #ffc107;
+  color: #343a40;
+}
+
+button.update:hover {
+  background-color: #e0a800;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Delete All Button */
+.delete-all {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-all:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  table th,
+  table td {
+    padding: 12px;
+  }
+
+  .violation-types {
+    flex-direction: column;
+  }
+}
