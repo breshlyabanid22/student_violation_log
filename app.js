@@ -1,5 +1,5 @@
-const SUPABASE_URL = process.env.MY_SUPABASE_URL;
-const SUPABASE_KEY = process.env.MY_SUPABASE_KEY;
+const SUPABASE_URL = 'https://pndfhvdsjrmboefrwimt.supabase.co'
+const SUPABASE_KEY = process.env.MY_SUPABASE_KEY
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const form = document.getElementById('violationForm');
